@@ -20,6 +20,8 @@
 ## Code Reference
 
 ```
-https://github.com/toji/gl-matrix
 https://github.com/Jam3/math-as-code
+https://github.com/mattdesl/minimath
+https://github.com/toji/gl-matrix
+https://github.com/josdejong/mathjs
 ```
