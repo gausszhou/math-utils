@@ -1,6 +1,6 @@
 # Math
 
-> My Math Library
+My Math Library
 
 ## Todo List
 - [ ] Vector
@@ -12,6 +12,8 @@
   - [ ] mat4
 - [ ] utils
   - [x] clamp
+  - [x] lerp
+  - [x] smoothstep
 - [ ] random
   - [ ] setSeed
   - [ ] getSeed
