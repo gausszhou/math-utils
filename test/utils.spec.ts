@@ -1,9 +1,24 @@
 import { test, expect } from "vitest";
-import { clamp, smoothstep } from "../src/utils";
+import { clamp, lerp, smoothstep } from "../src/utils";
+
 test("clamp", () => {
-  expect(clamp(2, 1, 10)).toEqual(2);
-  expect(clamp(12, 1, 10)).toEqual(10);
-  expect(clamp(-2, 1, 10)).toEqual(1);
+  expect(clamp(0, 10, -11)).toEqual(0);
+  expect(clamp(0, 10, -5)).toEqual(0);
+  expect(clamp(0, 10, -1)).toEqual(0);
+  expect(clamp(0, 10, 1)).toEqual(1);
+  expect(clamp(0, 10, 5)).toEqual(5);
+  expect(clamp(0, 10, 11)).toEqual(10);
+});
+
+test("lerp", () => {
+  // positive
+  expect(lerp(0, 10, 0.0)).toEqual(0);
+  expect(lerp(0, 10, 0.5)).toEqual(5);
+  expect(lerp(0, 10, 1.0)).toEqual(10);
+  // negative
+  expect(lerp(0, -10, 0.0)).toEqual(0);
+  expect(lerp(0, -10, 0.5)).toEqual(-5);
+  expect(lerp(0, -10, 1.0)).toEqual(-10);
 });
 
 test("smoothstep", () => {
